@@ -1,6 +1,8 @@
 /* eslint-disable react/forbid-prop-types */
 import React from 'react';
-import { Button, Card } from 'react-bootstrap';
+import {
+  Button, Card,
+} from 'react-bootstrap';
 import PropTypes from 'prop-types';
 
 const StockItems = ({ company }) => {
@@ -12,16 +14,24 @@ const StockItems = ({ company }) => {
     ticker,
   } = company;
   return (
-    <div>
-      <Card>
-        <div>{companyName}</div>
-        <div>{ticker}</div>
-        <div>{price}</div>
-        <div>{changes}</div>
-        <div>{changesPercentage}</div>
-        <Button>More... </Button>
-      </Card>
-    </div>
+    <Card className="stockCard">
+      <Card.Body>
+        <Card.Title className="ticker">{ticker}</Card.Title>
+        <Card.Subtitle className="companyName">{companyName}</Card.Subtitle>
+        <Card.Text>
+          {price}
+          {' '}
+          USD
+        </Card.Text>
+        <div>
+          <span className="profit">Profit</span>
+          {' '}
+          <span className="changes">{changes}</span>
+          {changesPercentage}
+        </div>
+      </Card.Body>
+      <Button>More... </Button>
+    </Card>
   );
 };
 

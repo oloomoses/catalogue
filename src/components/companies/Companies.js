@@ -1,6 +1,7 @@
 /* eslint-disable react/forbid-prop-types */
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Row } from 'react-bootstrap';
 import Spinner from '../layout/Spinner';
 import StockItems from '../stock/StockItems';
 
@@ -10,9 +11,11 @@ const Companies = ({ companies, loading }) => {
   }
   return (
     <div>
-      {companies.map((company) => (
-        <StockItems key={company.ticker} company={company} />
-      ))}
+      <Row>
+        {companies.map((company) => (
+          <StockItems key={company.ticker} company={company} />
+        ))}
+      </Row>
     </div>
   );
 };
