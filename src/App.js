@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Companies from './components/companies/Companies';
 import Search from './components/companies/Search';
-import Navbar from './components/layout/Navbar';
+import Navigation from './components/layout/Navigation';
 // import Company from './components/companies/Company';
 
 function App() {
@@ -42,9 +42,8 @@ function App() {
 
   return (
     <div>
-      <Navbar />
+      <Navigation searchCompany={searchCompany} />
       <div className="container">
-        <Search searchCompany={searchCompany} />
         <Companies loading={loading} companies={companies} />
         {/* <Company /> */}
       </div>
