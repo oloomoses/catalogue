@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import {
   Navbar, Nav, Form, FormControl, Button, Container,
@@ -14,14 +15,14 @@ const Navigation = ({ searchCompany }) => {
       <Container>
         <Navbar.Brand href="#home">Stocks</Navbar.Brand>
         <Nav className="mr-auto">
-          <Nav.Link href="#home">Home</Nav.Link>
-          <Nav.Link href="#features">Sectors Performance</Nav.Link>
+          <Nav><Link to="/" className="nav-link">Home</Link></Nav>
+          <Nav><Link to="/sectors" className="nav-link">Sectors Performance</Link></Nav>
         </Nav>
         <Form inline>
-          <FormControl as="select" placeholder="Search" className="mr-sm-2" custom onChange={onChange}>
-            <option value="actives">actives</option>
-            <option value="losers">losers</option>
-            <option value="gainers">gainers</option>
+          <FormControl as="select" placeholder="Search" className="mr-sm-2" onChange={onChange}>
+            <option value="actives">Most Active</option>
+            <option value="losers">Losers</option>
+            <option value="gainers">Gainers</option>
           </FormControl>
           <Button variant="outline-light">Select Category</Button>
         </Form>
