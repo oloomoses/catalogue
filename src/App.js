@@ -22,38 +22,10 @@ function App() {
       <div>
         <Navigation />
         <Switch>
-          <Route
-            exact
-            path="/"
-            render={() => (
-              <>
-                <div className="container">
-                  <Companies />
-                </div>
-              </>
-            )}
-          />
-
-          <Route
-            exact
-            path="/sectors"
-            render={() => (
-              <div className="container">
-                <Sectors />
-              </div>
-            )}
-          />
-          <Route
-            exact
-            path="/company/:ticker"
-            render={() => (
-              <div className="container">
-                <Company />
-              </div>
-            )}
-          />
+          <Route exact path="/" component={Companies} />
+          <Route exact path="/sectors" component={Sectors} />
+          <Route exact path="/company/:ticker" component={Company} />
         </Switch>
-
       </div>
     </Router>
   );

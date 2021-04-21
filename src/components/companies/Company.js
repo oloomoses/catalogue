@@ -27,7 +27,7 @@ const Company = () => {
   if (loading) return <Spinner />;
 
   return (
-    <div>
+    <div className="container">
       <div>{symbol}</div>
       <div>{price}</div>
       <div>{changes}</div>

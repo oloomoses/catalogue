@@ -16,25 +16,27 @@ const Sectors = () => {
   if (loading) return <Spinner />;
 
   return (
-    <div className="row">
-      {sectors.map((sector) => (
-        <div key={sector.sector}>
-          <Card className="stockCard">
-            <Card.Body>
-              <Card.Title>{sector.sector}</Card.Title>
-              <Card.Text className="mt-3">
-                <span className="profit">Percentage Change</span>
-                {' '}
-                <span className={sector.changesPercentage > 0 ? 'text-success' : 'text-danger'}>
-                  {sector.changesPercentage}
-                </span>
-              </Card.Text>
+    <div className="container">
+      <div className="row">
+        {sectors.map((sector) => (
+          <div key={sector.sector}>
+            <Card className="stockCard">
+              <Card.Body>
+                <Card.Title>{sector.sector}</Card.Title>
+                <Card.Text className="mt-3">
+                  <span className="profit">Percentage Change</span>
+                  {' '}
+                  <span className={sector.changesPercentage > 0 ? 'text-success' : 'text-danger'}>
+                    {sector.changesPercentage}
+                  </span>
+                </Card.Text>
 
-            </Card.Body>
-          </Card>
-        </div>
-      ))}
+              </Card.Body>
+            </Card>
+          </div>
+        ))}
 
+      </div>
     </div>
   );
 };

@@ -11,7 +11,7 @@ const Companies = () => {
     return <Spinner />;
   }
   return (
-    <div>
+    <div className="container">
       <Row>
         {companies.map((company) => (
           <StockItems key={company.ticker} company={company} />
