@@ -1,6 +1,4 @@
-/* eslint-disable react/forbid-prop-types */
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { Card } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 
@@ -32,13 +30,13 @@ const StockItems = ({ company }) => {
           </span>
         </div>
       </Card.Body>
-      <Link to={`/company/${ticker}`} className="btn btn-primary">More... </Link>
+      <a href={`/company/${ticker}`} className="btn btn-primary">More... </a>
     </Card>
   );
 };
 
 StockItems.propTypes = {
-  company: PropTypes.object.isRequired,
+  company: PropTypes.objectOf(PropTypes.any).isRequired,
 };
 
 export default StockItems;
