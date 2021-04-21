@@ -1,14 +1,16 @@
 import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import PropTypes from 'prop-types';
+import { useSelector, useDispatch } from 'react-redux';
 import Spinner from '../layout/Spinner';
+import { companyData } from '../../redux/stock/stockAction';
 
-const Company = ({
-  getCompany, loading, company,
-}) => {
+const Company = () => {
+  const dispatch = useDispatch();
+  const loading = useSelector((state) => state.loading);
+  const company = useSelector((state) => state.company);
   const { ticker } = useParams();
   useEffect(() => {
-    getCompany(ticker);
+    dispatch(companyData(ticker));
   }, []);
 
   const {
@@ -36,12 +38,6 @@ const Company = ({
       <div>{image}</div>
     </div>
   );
-};
-
-Company.propTypes = {
-  getCompany: PropTypes.func.isRequired,
-  loading: PropTypes.bool.isRequired,
-  company: PropTypes.objectOf(PropTypes.any).isRequired,
 };
 
 export default Company;

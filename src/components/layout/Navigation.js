@@ -1,13 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import PropTypes from 'prop-types';
+import { useDispatch } from 'react-redux';
 import {
   Navbar, Nav, Form, FormControl, Button, Container,
 } from 'react-bootstrap';
+import { filterStock } from '../../redux/stock/stockAction';
 
-const Navigation = ({ searchCompany }) => {
+const Navigation = () => {
+  const dispatch = useDispatch();
   const onChange = (e) => {
-    searchCompany(e.target.value);
+    dispatch(filterStock(e.target.value));
   };
 
   return (
@@ -29,10 +31,6 @@ const Navigation = ({ searchCompany }) => {
       </Container>
     </Navbar>
   );
-};
-
-Navigation.propTypes = {
-  searchCompany: PropTypes.func.isRequired,
 };
 
 export default Navigation;

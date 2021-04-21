@@ -1,11 +1,12 @@
-/* eslint-disable react/forbid-prop-types */
 import React from 'react';
-import PropTypes from 'prop-types';
+import { useSelector } from 'react-redux';
 import { Row } from 'react-bootstrap';
 import Spinner from '../layout/Spinner';
 import StockItems from '../stock/StockItems';
 
-const Companies = ({ companies, loading }) => {
+const Companies = () => {
+  const loading = useSelector((state) => state.loading);
+  const companies = useSelector((state) => state.companies);
   if (loading) {
     return <Spinner />;
   }
@@ -18,10 +19,6 @@ const Companies = ({ companies, loading }) => {
       </Row>
     </div>
   );
-};
-Companies.propTypes = {
-  companies: PropTypes.array.isRequired,
-  loading: PropTypes.bool.isRequired,
 };
 
 export default Companies;

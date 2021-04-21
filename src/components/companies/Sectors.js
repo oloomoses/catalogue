@@ -1,11 +1,16 @@
 import React, { useEffect } from 'react';
-import PropTypes from 'prop-types';
 import { Card } from 'react-bootstrap';
+import { useDispatch, useSelector } from 'react-redux';
 import Spinner from '../layout/Spinner';
+import { fetchSectors } from '../../redux/stock/stockAction';
 
-const Sectors = ({ getSectors, loading, sectors }) => {
+const Sectors = () => {
+  const loading = useSelector((state) => state.loading);
+  const sectors = useSelector((state) => state.sectors);
+  const dispatch = useDispatch();
+
   useEffect(() => {
-    getSectors();
+    dispatch(fetchSectors());
   }, []);
 
   if (loading) return <Spinner />;
@@ -32,12 +37,6 @@ const Sectors = ({ getSectors, loading, sectors }) => {
 
     </div>
   );
-};
-
-Sectors.propTypes = {
-  getSectors: PropTypes.func.isRequired,
-  loading: PropTypes.bool.isRequired,
-  sectors: PropTypes.arrayOf(PropTypes.any).isRequired,
 };
 
 export default Sectors;

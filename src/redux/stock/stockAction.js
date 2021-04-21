@@ -4,37 +4,59 @@ import {
   FILTER,
   SET_LOADING,
   GET_COMPANY,
+  GET_SECTORS,
 } from '../type';
 
 const setLoading = () => ({
   type: SET_LOADING,
 });
 
-const getCompanies = () => ({
+const getCompanies = (data) => ({
   type: GET_COMPANIES,
+  payload: data,
 });
 
-const filter = async (stock) => {
-  const url = `https://financialmodelingprep.com/api/v3/${stock}?apikey=3830446fe7a4c1873641ce52d4681a53`;
-  setLoading();
+const filter = (data) => ({
+  type: FILTER,
+  payload: data,
+});
+
+const getCompany = (data) => ({
+  type: GET_COMPANY,
+  payload: data,
+});
+
+const getSectors = (data) => ({
+  type: GET_SECTORS,
+  payload: data,
+});
+
+export const fetchdata = () => async (dispatch) => {
+  const url = 'https://financialmodelingprep.com/api/v3/actives?apikey=3830446fe7a4c1873641ce52d4681a53';
+  dispatch(setLoading());
   const res = await axios.get(url);
-  return {
-    type: FILTER,
-    payload: res.data,
-  };
+  dispatch(getCompanies(res.data));
 };
 
-const getCompany = async (ticker) => {
+export const filterStock = (stock) => async (dispatch) => {
+  const url = `https://financialmodelingprep.com/api/v3/${stock}?apikey=3830446fe7a4c1873641ce52d4681a53`;
+  dispatch(setLoading());
+  const res = await axios.get(url);
+  dispatch(filter(res.data));
+};
+
+export const companyData = (ticker) => async (dispatch) => {
   const url = `https://financialmodelingprep.com/api/v3/profile/${ticker}?apikey=3830446fe7a4c1873641ce52d4681a53`;
-  setLoading();
+  dispatch(setLoading());
 
   const res = await axios(url);
-  return {
-    type: GET_COMPANY,
-    payload: res.data[0],
-  };
+  dispatch(getCompany(res.data[0]));
 };
 
-export default {
-  setLoading, getCompany, getCompanies, filter,
+export const fetchSectors = () => async (dispatch) => {
+  const url = 'https://financialmodelingprep.com/api/v3/sectors-performance?apikey=3830446fe7a4c1873641ce52d4681a53';
+  dispatch(setLoading());
+
+  const res = await axios(url);
+  dispatch(getSectors(res.data));
 };
