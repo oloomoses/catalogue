@@ -21,3 +21,9 @@
   font-weight: bold !important;
   color: grey;
 }
+
+.spinnerStyle {
+  width: '200px';
+  margin: 'auto';
+  display: 'block';
+}

@@ -14,7 +14,7 @@ const Navigation = () => {
   return (
     <Navbar bg="primary" variant="dark" sticky="top">
       <Container>
-        <Navbar.Brand href="#home">Stocks</Navbar.Brand>
+        <Navbar.Brand href="/">Stocks</Navbar.Brand>
         <Nav className="mr-auto">
           <Nav.Link href="/">Home</Nav.Link>
           <Nav.Link href="/sectors">Sectors Performance</Nav.Link>
