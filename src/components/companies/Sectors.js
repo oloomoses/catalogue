@@ -26,7 +26,7 @@ const Sectors = () => {
                 <Card.Text className="mt-3">
                   <span className="profit">Percentage Change</span>
                   {' '}
-                  <span className={sector.changesPercentage > 0 ? 'text-success' : 'text-danger'}>
+                  <span className={parseFloat(sector.changesPercentage.match(/(-|\+)|(\.)|\d+/g).join('')) > 0 ? 'text-success' : 'text-danger'}>
                     {sector.changesPercentage}
                   </span>
                 </Card.Text>
