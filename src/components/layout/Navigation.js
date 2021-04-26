@@ -21,12 +21,12 @@ const Navigation = () => {
         </Nav>
         {url === '/' && (
         <Form inline>
+          <Button>Select Category</Button>
           <FormControl as="select" placeholder="Search" className="mr-sm-2" onChange={onChange}>
             <option value="actives">Most Active</option>
             <option value="losers">Losers</option>
             <option value="gainers">Gainers</option>
           </FormControl>
-          <Button variant="outline-light">Select Category</Button>
         </Form>
         )}
       </Container>

@@ -39,6 +39,13 @@ exports[`renders correctly matches the snapshot 1`] = `
     <form
       className="form-inline"
     >
+      <button
+        className="btn btn-primary"
+        disabled={false}
+        type="button"
+      >
+        Select Category
+      </button>
       <select
         className="mr-sm-2 form-control"
         onChange={[Function]}
@@ -60,13 +67,6 @@ exports[`renders correctly matches the snapshot 1`] = `
           Gainers
         </option>
       </select>
-      <button
-        className="btn btn-outline-light"
-        disabled={false}
-        type="button"
-      >
-        Select Category
-      </button>
     </form>
   </div>
 </nav>

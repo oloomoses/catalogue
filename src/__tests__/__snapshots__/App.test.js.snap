@@ -40,6 +40,13 @@ Array [
       <form
         className="form-inline"
       >
+        <button
+          className="btn btn-primary"
+          disabled={false}
+          type="button"
+        >
+          Select Category
+        </button>
         <select
           className="mr-sm-2 form-control"
           onChange={[Function]}
@@ -61,13 +68,6 @@ Array [
             Gainers
           </option>
         </select>
-        <button
-          className="btn btn-outline-light"
-          disabled={false}
-          type="button"
-        >
-          Select Category
-        </button>
       </form>
     </div>
   </nav>,
