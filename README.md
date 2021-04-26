@@ -4,7 +4,6 @@
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
 
-
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
@@ -24,21 +23,6 @@
     <a href="https://github.com/oloomoses/catalogue/issues">Report Bug & Request Feature</a>
   </p>
 </p>
-
-
-<!-- TABLE OF CONTENTS -->
-## Table of Contents
-
-* [About the Project](#about-the-project)
-  * [Built With](#built-with)
-* [Getting Started](#getting-started)
-* [Usage](#usage)
-* [Authors](#authors)
-* [Contributing](#contributing)
-* [License](#license)
-* [Acknowledgements](#acknowledgements)
-
-
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
@@ -86,7 +70,6 @@ repository from github to try it.
 
 
 ## Author
-
 👤 **Oloo Moses**
 
 - Github: [@githubhandle](https://github.com/oloomoses)
@@ -104,13 +87,9 @@ Contributions are what make the open source community such an amazing place to b
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-
-
 <!-- LICENSE -->
 ## License
-
 Distributed under the MIT License.
-
 
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
@@ -118,7 +97,6 @@ Distributed under the MIT License.
 * [GitHub](https://github.com/)
 * https://financialmodelingprep.com/
 * [Netlify](https://www.netlify.com/)
-
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
