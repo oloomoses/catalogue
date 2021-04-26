@@ -42,7 +42,13 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-This is Reat & Redux app that displays a catalogue of financial values using the Stock API. The main features of this app are, the ability to browse through a list of stock items, filter according to categories and, access the details of each item.
+This is a Reat & Redux app that displays a catalogue of financial values using the Stock API.
+The main features of this app are:
+- A bility to browse through a list of stock items
+- Filter companies stocks according to categories
+- Access the details of each stock item.
+
+![Screenshot](./demo.gif)
 
 ### Built With
 Components of this project is listed below;
@@ -64,13 +70,19 @@ Components of this project is listed below;
 This project has been deployed on Netlify, you can [visit page](https://naughty-borg-1ad17c.netlify.app/) or download/clone
 repository from github to try it.
 
+<!-- PROJECT SETUP -->
+## Set up
+* clone the repo using `https://github.com/oloomoses/catalogue.git` command
+* Run `cd catalogue` to get into the project directory
+* Run `npm install` to install the project dependencies
 
 <!-- USAGE EXAMPLES -->
-## Usage
-* clone the repo using `https://github.com/oloomoses/catalogue.git` command
-* Run `cd catalogue`
+### Usage
 * Run `npm start`
 * Open the browser and enter `http://localhost:3000/`
+
+### Test
+* Run `npm run test`
 
 
 ## Author
