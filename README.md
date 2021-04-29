@@ -26,7 +26,7 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-This is a Reat & Redux app that displays a catalogue of financial values using the Stock API.
+This is a React & Redux app that displays a catalogue of financial values using the Stock API.
 The main features of this app are:
 - A bility to browse through a list of stock items
 - Filter companies stocks according to categories
