@@ -1,0 +1,82 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly matches the snapshot 1`] = `
+Array [
+  <nav
+    className="navbar navbar-expand navbar-dark bg-primary sticky-top"
+  >
+    <div
+      className="container"
+    >
+      <a
+        className="navbar-brand"
+        href="/"
+      >
+        Stocks
+      </a>
+      <div
+        className="mr-auto navbar-nav"
+        onKeyDown={[Function]}
+      >
+        <a
+          className="nav-link"
+          data-rb-event-key="/"
+          href="/"
+          onClick={[Function]}
+          onKeyDown={[Function]}
+        >
+          Home
+        </a>
+        <a
+          className="nav-link"
+          data-rb-event-key="/sectors"
+          href="/sectors"
+          onClick={[Function]}
+          onKeyDown={[Function]}
+        >
+          Sectors Performance
+        </a>
+      </div>
+      <form
+        className="form-inline"
+      >
+        <button
+          className="btn btn-primary"
+          disabled={false}
+          type="button"
+        >
+          Select Category
+        </button>
+        <select
+          className="mr-sm-2 form-control"
+          onChange={[Function]}
+          placeholder="Search"
+        >
+          <option
+            value="actives"
+          >
+            Most Active
+          </option>
+          <option
+            value="losers"
+          >
+            Losers
+          </option>
+          <option
+            value="gainers"
+          >
+            Gainers
+          </option>
+        </select>
+      </form>
+    </div>
+  </nav>,
+  <div
+    className="container"
+  >
+    <div
+      className="row"
+    />
+  </div>,
+]
+`;

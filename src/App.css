@@ -1,0 +1,23 @@
+.stockCard {
+  width: 250px;
+  margin: 1rem;
+}
+
+.profit {
+  color: grey;
+  margin-right: 1rem;
+}
+
+.changes {
+  margin-right: 5px;
+}
+
+.ticker {
+  font-size: 2rem !important;
+  font-weight: bolder !important;
+}
+
+.companyName {
+  font-weight: bold !important;
+  color: grey;
+}

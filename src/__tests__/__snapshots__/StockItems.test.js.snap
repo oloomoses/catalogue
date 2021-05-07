@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly matches the snapshot 1`] = `
+<div
+  className="stockCard card"
+>
+  <div
+    className="card-body"
+  >
+    <div
+      className="ticker card-title h5"
+    >
+      BRK-A
+    </div>
+    <div
+      className="companyName card-subtitle h6"
+    >
+      Berkshire Hathaway Inc
+    </div>
+    <p
+      className="mt-3 card-text"
+    >
+      <span
+        className="profit"
+      >
+        Price
+      </span>
+      408840
+       
+      USD
+    </p>
+    <div>
+      <span
+        className="profit"
+      >
+        Profit
+      </span>
+       
+      <span
+        className="text-danger"
+      >
+        <span
+          className="changes"
+        >
+          BRK-A
+        </span>
+        2939
+      </span>
+    </div>
+  </div>
+  <a
+    className="btn btn-primary"
+    href="/company/BRK-A"
+  >
+    More... 
+  </a>
+</div>
+`;
